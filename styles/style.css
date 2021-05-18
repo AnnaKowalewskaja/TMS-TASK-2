@@ -99,6 +99,44 @@ font-size: 0.55rem;
 letter-spacing: 0.185rem;
 }
 
+.scroll__animation{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+ 
+}
+.scroll__animation :first-child{
+  animation: scroll 3s linear infinite;
+
+}
+
+.scroll__animation :nth-child(2n){
+  animation: scroll 3s linear infinite;
+  animation-delay:0.3s;
+}
+
+.scroll__animation :last-child{
+  animation: scroll 3s linear infinite;
+  animation-delay:0.6s;
+}
+
+@keyframes scroll{
+  0%{
+    opacity: .7;
+  }
+
+30%{
+  opacity: .3;
+}
+
+
+  100%{
+    opacity: 1;
+  }
+}
+
+
+
 /*navbar*/
 
 .navbar{
@@ -412,18 +450,152 @@ font-size: 0.7rem;
 }
 
 .form__input::placeholder{
-  
   font-size: 0.7rem;
   color:var(--gray);
- 
-  
 }
+
+
 
 /*footer*/
 .footer{
   background: #141A20;
- 
+  color:var(--white);
 }
+
+
+
+.footer__list{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 240px;
+ display: flex;
+ justify-content: space-between;
+padding-top: 2.1rem;
+flex-wrap: wrap;
+}
+
+.footer__item_title{
+  font-weight: 400;
+  font-size: 0.55rem;
+}
+
+
+.footer__item_social-block{
+  display: flex;
+  justify-content: space-between;
+  max-width:87px;
+  flex-wrap: wrap;
+}
+
+.footer__item_social-block {
+ padding-top:1.05rem;
+}
+
+.social-block__item{
+  font-size: 13px;
+}
+
+.item__first_size{
+width: 26.6%;
+max-width: 250px;
+
+}
+
+.item__second_size{
+width: 28%;
+max-width: 262px;
+
+}
+
+.footer__item_title{
+  margin-bottom: 0.5rem;
+}
+
+
+.item__third_size{
+width: 12.6%;
+max-width: 118px;
+}
+
+.item__fourth_size{
+width: 9.3%;
+max-width: 87px;
+}
+
+.footer__item_text{
+  font-size: 0.55rem;
+  line-height: 0.95rem;
+  letter-spacing: 0.0425rem;
+  font-weight: 400;
+}
+
+.company__block{
+display: flex;
+flex-direction:column;
+
+}
+
+.company__block :not(:last-child),
+.contact__info :not(:last-child){
+  margin-bottom: 1rem;
+}
+
+.footer__item_link{
+ color:var(--white);
+ text-decoration: none;
+ font-size: 0.55rem;
+ font-weight: 600;
+ line-height: 227%;
+}
+
+.footer__item_link:hover{
+  cursor:pointer;
+  color:var(--blue);
+  transition: all 0.4s ease-in;
+}
+
+.links{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.links__block{
+  display: flex;
+  flex-direction:column;
+}
+
+.contact__info_text{
+  line-height: 0.8rem;
+  
+}
+
+.contact__info{
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .copyright{
   background-color: var(--black);
@@ -437,4 +609,131 @@ font-size: 0.7rem;
 text-align: center;
 line-height: 0.75rem;
 padding: 22px 0;
+
 }
+
+@media (min-width:1024px) and (max-width:1366px){
+  .container {
+    width: 90%;}
+
+    .footer__item_social-block{
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    .social-block__item{
+font-size: 40px;
+margin-bottom: 0.5rem;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px){
+  .container {
+    width: 90%;}
+
+    .footer__item_social-block{
+      flex-direction: column;
+      justify-content: start;
+    }
+
+    .social-block__item{
+font-size: 40px;
+margin-bottom: 0.5rem;
+    }
+
+    .navigation {
+      width: 60%;
+  }
+
+  .description__title-header_size,
+  .description__subtitle
+   {
+
+    max-width: 32rem;}
+
+    .description__subtitle{
+margin-bottom: 1rem;
+    }
+
+    .description__images {
+     width: 32rem;
+    }
+
+    .title__container {
+flex-direction: column;
+    }
+.title__container {
+  margin-bottom: 3rem;
+}
+
+.service__item{
+  padding: 25px 20px;
+}
+
+.service__container{
+  margin-bottom: 2rem;
+}
+
+.sign-up__container{
+  width: 100%;
+}
+
+.item__second_size{
+  width: 35%;
+}
+
+.footer__item_link{
+  font-size: 0.7rem;
+}
+
+.footer__item_title{
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.item__third_size{
+  width: 17%;
+}
+
+.description__subtitle_small{
+  font-size: 0.8rem;
+
+}
+
+.navigation__item{
+  font-size: 0.7rem;
+}
+.title__block-right {
+width: 80%;
+
+}
+
+  }
+
+  @media  (max-width:768px){
+    *{
+      font-size: 23px;
+    }
+    
+    h1{
+      font-size: 1.5rem;
+    }
+
+    .container{
+      width: 90%;
+    }
+
+    .navbar__container{
+      flex-direction: column;
+
+    }
+
+    .navigation__list{
+      flex-direction: row;
+    }
+
+    
+    .service__item{
+      width: 100%;
+    }
+  }
